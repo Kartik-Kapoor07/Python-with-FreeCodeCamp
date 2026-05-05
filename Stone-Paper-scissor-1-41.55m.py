@@ -24,12 +24,12 @@ def who_win(Computer,Person):
             return "You win!"
         
     elif Computer=="Scissor":
-        if Person=="stone":
+        if Person=="Stone":
             return "You win!"
         else:
             return "You loose!"
 
 move=choice()
 print(move)
-win=who_win(move["Person_choice"],move["Computer_choice"])
+win=who_win(move["Computer_choice"],move["Person_choice"])
 print(win)
