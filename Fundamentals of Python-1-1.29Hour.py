@@ -65,3 +65,10 @@ print(fruit[1:4])# this print letters from 1 to 3 index in python last number is
 num1=2+3j
 num2=complex(2,3)
 print(num2.real,num2.imag)
+
+# In operator
+name="kartik"
+if "k"in name:
+    print("k is in name")
+# it is used to check whether an item is in a string or not one more example is
+print("kar" in name)
