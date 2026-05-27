@@ -30,4 +30,3 @@ elif args.Operation=="div":
     result=args.num1/args.num2
 
 print(result)
-
