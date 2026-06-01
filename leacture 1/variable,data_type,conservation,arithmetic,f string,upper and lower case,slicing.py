@@ -79,4 +79,4 @@ host2="karti2"
 host3="karti1"
 print(host1 is host2)# it check weather two variable have same memory location or not it doesnot check the value of variable
 print(host2 is host1)
-print(host3 is host1)
+print(host3 is host1)# Update learning

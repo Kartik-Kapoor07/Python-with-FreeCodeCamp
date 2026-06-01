@@ -246,4 +246,4 @@ class person():
     def info(self):
         print(f"{self.name} is a {self.occupation} and his networth is {self.networth} ")
 person1=person()
-person1.info()
+person1.info()# Update learning

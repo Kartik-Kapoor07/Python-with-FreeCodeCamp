@@ -21,4 +21,4 @@ print(taxsystem(100, 15, 5.4))  # Example usage
 print("\n")
 help(taxsystem)  # This will display the docstring of the function
 print("\n")
-print(taxsystem.__doc__)  # This will also display the docstring of the function
+print(taxsystem.__doc__)  # This will also display the docstring of the function# Update learning

@@ -27,4 +27,4 @@ expense=[
 ]
 
 sum=reduce(lambda x,y: x + y[1], expense,0)
-print(sum)
+print(sum)# Update learning

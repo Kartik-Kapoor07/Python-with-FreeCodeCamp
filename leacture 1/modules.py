@@ -33,4 +33,4 @@ print(math.ceil(3.2))# it will give the upper value of 3.2
 print(math.floor(3.8))# it will give the lower value of 3.8
 print(math.pi)# it will give the value of pi
 print(math.e)# it will give the value of e
-print(math.pow(4,2))# it will give the square of 4
+print(math.pow(4,2))# it will give the square of 4# Update learning

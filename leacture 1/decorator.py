@@ -25,4 +25,4 @@ def logger(func):
 def calculate():
     print("Doing calculation")
 
-calculate()
+calculate()# Update learning
