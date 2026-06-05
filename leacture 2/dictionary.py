@@ -1,4 +1,4 @@
-# dictionary: unordered, mutable, key value pair, duplicates are not possible and if in any case is two same key have different values then latest value will replace old value
+# dictionary: ordered, mutable, key value pair, duplicates are not possible and if in any case is two same key have different values then latest value will replace old value
 
 dict1 = {
     "Kartik":0,
