@@ -1,0 +1,9 @@
+2026-06-09 18:55:34,575 - INFO - Program started
+2026-06-09 18:55:39,824 - DEBUG - User entered values: 3, 1
+2026-06-09 18:55:39,824 - INFO - Division successful
+2026-06-09 18:55:39,824 - INFO - Program execution ending
+2026-06-09 18:56:56,681 - INFO - Program started
+2026-06-09 18:56:59,798 - DEBUG - User entered values: 3, 0
+2026-06-09 18:56:59,799 - WARNING - User entered zero as second number
+2026-06-09 18:56:59,799 - ERROR - Division by zero attempted
+2026-06-09 18:56:59,799 - INFO - Program execution ending
