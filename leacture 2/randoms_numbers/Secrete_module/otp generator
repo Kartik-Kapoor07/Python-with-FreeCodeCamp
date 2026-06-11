@@ -1,0 +1,8 @@
+import secrets
+
+otp = ""
+
+for _ in range(6):
+    otp += str(secrets.randbelow(10))
+
+print("OTP:", otp)
