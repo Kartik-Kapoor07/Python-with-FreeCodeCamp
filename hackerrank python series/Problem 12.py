@@ -92,4 +92,4 @@ if __name__ == '__main__':
             mylist.pop()
         
         elif command == "reverse":
-            mylist.sort(reverse=True)       
+            mylist.reverse()       
