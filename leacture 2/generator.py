@@ -33,3 +33,13 @@ squares_gen = (x**2 for x in range(1000000))
 print(squares_list)
 print(next(squares_gen))   # 0
 print(next(squares_gen))   # 1
+
+def fibonacci(limit):
+    a, b = 0, 1
+    while a<limit:          # infinite loop — safe because of yield
+        yield a
+        a, b = b, a + b
+
+fib = fibonacci()
+for _ in range(8):
+    print(next(fib))     # 0 1 1 2 3 5 8 13
