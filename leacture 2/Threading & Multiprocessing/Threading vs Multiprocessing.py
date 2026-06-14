@@ -160,6 +160,7 @@ just like waiter in a overloaded restaurants
 """
 
 from multiprocessing import Process
+import threading
 import time
 
 def work():
@@ -178,3 +179,33 @@ if __name__ == "__main__":
     p2.join()
 
 print("Done")
+
+def boil_water():
+    print("Boiling water...")
+    time.sleep(2)
+    print("Water boiled ✔")
+
+def add_tea_leaves():
+    print("Adding tea leaves...")
+    time.sleep(1)
+    print("Tea leaves added ✔")
+
+def add_milk():
+    print("Adding milk...")
+    time.sleep(1.5)
+    print("Milk added ✔")
+
+t1 = threading.Thread(target=boil_water)
+t2 = threading.Thread(target=add_tea_leaves)
+t3 = threading.Thread(target=add_milk)
+
+t1.start()
+t2.start()
+t3.start()
+
+t1.join()
+t2.join()
+t3.join()
+
+print("Tea is ready ☕")
+
