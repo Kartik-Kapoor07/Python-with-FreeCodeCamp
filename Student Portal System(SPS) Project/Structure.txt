@@ -1,0 +1,71 @@
+--student_management_system--/
+
+1. json_storage.py
+   ├─ load_data()
+   └─ save_data()
+
+2. student.py
+   └─ Student class
+      ├─ name
+      ├─ class
+      ├─ age
+      ├─ height
+      ├─ blood_group
+      └─ Student ID (auto-generated)
+
+3. password_manager.py
+   ├─ generate_salt()
+   ├─ create_hash()
+   └─ verify_password()
+
+4. logger_manager.py
+   ├─ log_login()
+   ├─ log_logout()
+   └─ log_error()
+
+5. authentication.py
+   ├─ signup()
+   ├─ login()
+   ├─ logout()
+   ├─ forgot_password()
+   └─ change_password()
+
+6. grade_manager.py
+   ├─ view_marks()
+   ├─ calculate_percentage()
+   ├─ calculate_grade()
+   └─ report_card()
+
+7. pdf_manager.py
+   └─ generate_report_card_pdf()
+
+8. main.py
+   ├─ main_menu()
+   ├─ login_menu()
+   ├─ signup_menu()
+   │   ├─ Enter Name
+   │   ├─ Enter Age
+   │   ├─ Enter Height
+   │   ├─ Enter Blood Group
+   │   ├─ Enter Class
+   │   ├─ Enter Username
+   │   └─ Enter Password
+   │
+   └─ student_dashboard()
+       ├─ View Profile
+       │   ├─ Name
+       │   ├─ Age
+       │   ├─ Height
+       │   ├─ Blood Group
+       │   ├─ Class
+       │   └─ Roll Number
+       │
+       ├─ Grade Management
+       │   ├─ View Marks
+       │   ├─ View Percentage
+       │   ├─ View Grade
+       │   ├─ View Report Card
+       │   └─ Download Report Card PDF
+       │
+       ├─ Change Password
+       └─ Logout
