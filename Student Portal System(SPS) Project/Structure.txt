@@ -1,71 +1,116 @@
---student_management_system--/
+--Student Portal System (SPS) Project--
 
-1. json_storage.py
-   ├─ load_data()
-   └─ save_data()
+1. main.py
+   - main_menu()
+     - Sign up
+     - Login
+     - Exit
 
-2. student.py
-   └─ Student class
-      ├─ name
-      ├─ class
-      ├─ age
-      ├─ height
-      ├─ blood_group
-      └─ Student ID (auto-generated)
+   - student_dashboard(student_id)
+     - View Profile
+       - Name
+       - Age
+       - Height
+       - Blood Group
+       - Class
+       - Roll Number / Student ID
+     - Open notes
+       - Uses the logged-in student's saved class
+       - User selects subject
+       - User selects chapter
+     - Logout
 
-3. password_manager.py
-   ├─ generate_salt()
-   ├─ create_hash()
-   └─ verify_password()
+   - view_profile(student_id)
+     - Loads student details from students.json
+     - Displays the student profile
 
-4. logger_manager.py
-   ├─ log_login()
-   ├─ log_logout()
-   └─ log_error()
 
-5. authentication.py
-   ├─ signup()
-   ├─ login()
-   ├─ logout()
-   ├─ forgot_password()
-   └─ change_password()
+2. Student.py
+   - Student class
+     - Student ID
+     - Name
+     - Class
+     - Age
+     - Height
+     - Blood Group
+     - Saves profile data using storage.py
 
-6. grade_manager.py
-   ├─ view_marks()
-   ├─ calculate_percentage()
-   ├─ calculate_grade()
-   └─ report_card()
 
-7. pdf_manager.py
-   └─ generate_report_card_pdf()
+3. Sign_up_and_login.py
+   - sign_in()
+     - Takes username and password
+     - Checks password strength
+     - Generates student ID
+     - Hashes password with salt
+     - Saves login details in Password.json
 
-8. main.py
-   ├─ main_menu()
-   ├─ login_menu()
-   ├─ signup_menu()
-   │   ├─ Enter Name
-   │   ├─ Enter Age
-   │   ├─ Enter Height
-   │   ├─ Enter Blood Group
-   │   ├─ Enter Class
-   │   ├─ Enter Username
-   │   └─ Enter Password
-   │
-   └─ student_dashboard()
-       ├─ View Profile
-       │   ├─ Name
-       │   ├─ Age
-       │   ├─ Height
-       │   ├─ Blood Group
-       │   ├─ Class
-       │   └─ Roll Number
-       │
-       ├─ Grade Management
-       │   ├─ View Marks
-       │   ├─ View Percentage
-       │   ├─ View Grade
-       │   ├─ View Report Card
-       │   └─ Download Report Card PDF
-       │
-       ├─ Change Password
-       └─ Logout
+   - log_in()
+     - Takes username and password
+     - Checks saved password hash
+     - Returns student ID after successful login
+
+   - load_users()
+     - Loads login data from Password.json
+
+   - save_users(users)
+     - Saves login data to Password.json
+
+
+4. Password_manager.py
+   - generate_salt()
+   - hash_password(password, salt)
+   - verify(stored_hash, entered_password, salt)
+   - verify_password(stored_hash, entered_password, salt)
+
+
+5. Id_generator.py
+   - get_student_id()
+     - Reads last student ID from meta.json
+     - Creates the next student ID
+     - Saves the updated last ID
+     - Returns the new student ID
+
+
+6. storage.py
+   - load_data()
+     - Loads student profile data from students.json
+
+   - give_data(student_data)
+     - Saves or updates student profile data in students.json
+
+   - get_student_by_id(student_id)
+     - Finds one student profile using student ID
+
+
+7. Notes.py
+   - Notes class
+     - ask_user(student_class)
+       - Uses saved class from student profile
+       - Asks subject: Science or Maths
+       - Asks chapter: Chapter 1 or Chapter 2
+       - Builds the PDF path automatically
+       - Opens the selected notes PDF
+
+
+8. Data files
+   - Password.json
+     - Stores usernames, student IDs, salts, and password hashes
+
+   - students.json
+     - Stores student profile information
+
+   - meta.json
+     - Stores the last generated student ID
+
+
+9. Notes folder
+   - notes/
+     - Class 8/
+       - Science/
+       - Maths/
+     - Class 9/
+       - Science/
+       - Maths/
+     - Class 10/
+       - Science/
+       - Maths/

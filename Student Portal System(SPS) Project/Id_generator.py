@@ -1,14 +1,16 @@
 import json
 import os
 
-FILE = "C:\\Users\\karti\\Music\\Python-with-FreeCodeCamp\\Student Portal System(SPS) Project\\meta.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE = os.path.join(BASE_DIR, "meta.json")
 
 def get_student_id():
     if not os.path.exists(FILE):
+        counter = 100001
         with open(FILE, "w") as f:
-            json.dump({"last_id": 100000}, f, indent=4)
+            json.dump({"last_id": counter}, f, indent=4)
             
-    elif  os.path.exists(FILE):
+    else:
         with open(FILE, "r") as f:
             data = json.load(f)
 
@@ -19,3 +21,5 @@ def get_student_id():
 
         with open(FILE, "w") as f:
             json.dump(data, f, indent=4)
+
+    return counter
